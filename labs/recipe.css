@@ -1,0 +1,28 @@
+body {
+  	background-color: #D6C2AD;
+	width:800px;
+	margin: 25px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#recipe {
+	border: 3px solid;
+	border-color:#009933;
+	padding: 5px;
+	background-color:#FFFFE0;
+}
+h1, h2 {
+	font-family:Georgia, serif;
+	color: #004700;
+}
+#ingredients:hover, #details:hover, #directions:hover, #notes:hover{
+	background-color:#CCCCFF;
+}
+ul {
+	list-style-type:none;
+}
+#ingredients ul{
+	list-style-type:square;
+}
+p{
+	padding-left:10px;
+}

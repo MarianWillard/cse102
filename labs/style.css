@@ -1,0 +1,14 @@
+p {
+	text-align: left;
+}
+body {
+	background-color:#70B8FF
+}
+h1, h2 {
+	font-family: Verdana, Geneva, sans-serif;
+}
+#sites {
+	background-color:#CCFFFF;
+	border: 1px solid black;
+	width: 300px;
+}
