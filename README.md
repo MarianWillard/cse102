@@ -1,2 +1,2 @@
-# CSE102  
+# cse102  
 Wow! GitHub!
