@@ -1,0 +1,15 @@
+table, th, td{
+	border: 1px solid black;
+}
+.table{
+	display: block;
+	margin: 55px 0px 0px 440px;
+}
+.circuit{
+	float: left;
+	display: block;
+}
+
+#half-adder{
+
+}

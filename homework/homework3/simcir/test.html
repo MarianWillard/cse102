@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="simcir.js"></script>
+    <link rel="stylesheet" type="text/css" href="simcir.css" />
+    <script type="text/javascript" src="simcir-basicset.js"></script>
+    <link rel="stylesheet" type="text/css" href="simcir-basicset.css" />
+    <script type="text/javascript" src="simcir-library.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="simcir">
+		{
+		  "width":800,
+		  "height":400,
+		  "showToolbox":true,
+		  "toolbox":[
+			{"type":"In"},
+			{"type":"Out"},
+			{"type":"DC"},
+			{"type":"LED"},
+			{"type":"PushOff"},
+			{"type":"PushOn"},
+			{"type":"Toggle"},
+			{"type":"BUF"},
+			{"type":"NOT"},
+			{"type":"AND"},
+			{"type":"NAND"},
+			{"type":"OR"},
+			{"type":"NOR"},
+			{"type":"EOR"},
+			{"type":"ENOR"},
+			{"type":"OSC"},
+			{"type":"7seg"},
+			{"type":"16seg"},
+			{"type":"4bit7seg"},
+			{"type":"RotaryEncoder"},
+			{"type":"BusIn"},
+			{"type":"BusOut"},
+			{"type":"RS-FF"},
+			{"type":"JK-FF"},
+			{"type":"T-FF"},
+			{"type":"D-FF"},
+			{"type":"8bitCounter"},
+			{"type":"HalfAdder"},
+			{"type":"FullAdder"},
+			{"type":"4bitAdder"},
+			{"type":"2to4BinaryDecoder"},
+			{"type":"3to8BinaryDecoder"},
+			{"type":"4to16BinaryDecoder"}
+		  ],
+		  "devices":[
+			{"type":"Toggle","id":"dev0","x":112,"y":232,"label":"Toggle"},
+			{"type":"OR","id":"dev1","x":216,"y":256,"label":"OR"},
+			{"type":"AND","id":"dev2","x":216,"y":208,"label":"AND"},
+			{"type":"NOT","id":"dev3","x":272,"y":208,"label":"NOT"},
+			{"type":"Toggle","id":"dev4","x":112,"y":296,"label":"Toggle"},
+			{"type":"DC","id":"dev5","x":48,"y":264,"label":"DC"},
+			{"type":"AND","id":"dev6","x":320,"y":240,"label":"AND"},
+			{"type":"LED","id":"dev7","x":392,"y":240,"label":"Sum"},
+			{"type":"LED","id":"dev8","x":400,"y":296,"label":"Carry"},
+			{"type":"AND","id":"dev9","x":216,"y":312,"label":"AND"}
+		  ],
+		  "connectors":[
+			{"from":"dev0.in0","to":"dev5.out0"},
+			{"from":"dev1.in0","to":"dev0.out0"},
+			{"from":"dev1.in1","to":"dev4.out0"},
+			{"from":"dev2.in0","to":"dev0.out0"},
+			{"from":"dev2.in1","to":"dev4.out0"},
+			{"from":"dev3.in0","to":"dev2.out0"},
+			{"from":"dev4.in0","to":"dev5.out0"},
+			{"from":"dev6.in0","to":"dev3.out0"},
+			{"from":"dev6.in1","to":"dev1.out0"},
+			{"from":"dev7.in0","to":"dev6.out0"},
+			{"from":"dev8.in0","to":"dev9.out0"},
+			{"from":"dev9.in0","to":"dev0.out0"},
+			{"from":"dev9.in1","to":"dev4.out0"}
+		  ]
+		}
+    </div>
+  </body>
+</html>
