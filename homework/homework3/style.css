@@ -42,25 +42,15 @@ h2, h3 {
 	background-color:#FFFFFF;
 }
 
-#NAND {
+#NANDmem{
 	margin-top: 250px;
 }
 
 
 .description{
 	text-align: left;
-
 }
-#half-adder{
 
-}
-#full-adder{
-	
-
-}
-#threebitadder{
-
-}
 hr {
 	border-style: outset;
 	border-width: 1px;
