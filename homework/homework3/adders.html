@@ -15,8 +15,11 @@
 	<h2>CSE 102 Adders</h2>
 	
 	
-	<div id="half-addder">
+	<div class="section" id="half-addder">
 		<h3>Half-Adder</h3>
+		<div class="description">
+			<p> blah blah blah description</p>
+		</div>
 		<div class="circuit">
 			<div class="simcir">
 				{
@@ -123,16 +126,92 @@
 			</table>	
 		</div>
 	</div>
-	<div id="full-adder">
+	<div class="section" id="full-adder">
+		<h3>Full Adder</h3>
+		<div class="description">
+			<p> blah blah blah description</p>
+		</div>
 		<div class="circuit">
+			<div class="simcir">
+				{
+				  "width":400,
+				  "height":200,
+				  "showToolbox":false,
+				  "toolbox":[
+					{"type":"In"},
+					{"type":"Out"},
+					{"type":"DC"},
+					{"type":"LED"},
+					{"type":"PushOff"},
+					{"type":"PushOn"},
+					{"type":"Toggle"},
+					{"type":"BUF"},
+					{"type":"NOT"},
+					{"type":"AND"},
+					{"type":"NAND"},
+					{"type":"OR"},
+					{"type":"NOR"},
+					{"type":"EOR"},
+					{"type":"ENOR"},
+					{"type":"OSC"},
+					{"type":"7seg"},
+					{"type":"16seg"},
+					{"type":"4bit7seg"},
+					{"type":"RotaryEncoder"},
+					{"type":"BusIn"},
+					{"type":"BusOut"},
+					{"type":"RS-FF"},
+					{"type":"JK-FF"},
+					{"type":"T-FF"},
+					{"type":"D-FF"},
+					{"type":"8bitCounter"},
+					{"type":"HalfAdder"},
+					{"type":"FullAdder"},
+					{"type":"4bitAdder"},
+					{"type":"2to4BinaryDecoder"},
+					{"type":"3to8BinaryDecoder"},
+					{"type":"4to16BinaryDecoder"}
+				  ],
+				  "devices":[
+					{"type":"Toggle","id":"dev0","x":72,"y":16,"label":"A"},
+					{"type":"DC","id":"dev1","x":8,"y":56,"label":"DC"},
+					{"type":"OR","id":"dev2","x":296,"y":112,"label":"OR"},
+					{"type":"LED","id":"dev3","x":360,"y":16,"label":"Sum"},
+					{"type":"LED","id":"dev4","x":360,"y":112,"label":"Carry"},
+					{"type":"AND","id":"dev5","x":136,"y":64,"label":"AND"},
+					{"type":"EOR","id":"dev6","x":136,"y":16,"label":"EOR"},
+					{"type":"AND","id":"dev7","x":240,"y":72,"label":"AND"},
+					{"type":"EOR","id":"dev8","x":232,"y":24,"label":"EOR"},
+					{"type":"Toggle","id":"dev9","x":72,"y":128,"label":"Cin"},
+					{"type":"Toggle","id":"dev10","x":72,"y":72,"label":"B"}
+				  ],
+				  "connectors":[
+					{"from":"dev0.in0","to":"dev1.out0"},
+					{"from":"dev2.in0","to":"dev7.out0"},
+					{"from":"dev2.in1","to":"dev5.out0"},
+					{"from":"dev3.in0","to":"dev8.out0"},
+					{"from":"dev4.in0","to":"dev2.out0"},
+					{"from":"dev5.in0","to":"dev0.out0"},
+					{"from":"dev5.in1","to":"dev10.out0"},
+					{"from":"dev6.in0","to":"dev0.out0"},
+					{"from":"dev6.in1","to":"dev10.out0"},
+					{"from":"dev7.in0","to":"dev6.out0"},
+					{"from":"dev7.in1","to":"dev9.out0"},
+					{"from":"dev8.in0","to":"dev6.out0"},
+					{"from":"dev8.in1","to":"dev9.out0"},
+					{"from":"dev9.in0","to":"dev1.out0"},
+					{"from":"dev10.in0","to":"dev1.out0"}
+				  ]
+				}
+			</div>
 		</div>
 		
 		<div class="table">
 			<table>
 				<tr>
-					<th>A</th>
-					<th>B</th>
 					<th>Cin</th>
+					<th>B</th>
+					<th>A</th>
 					<th>Cout</th>
 					<th>S</th>
 				<tr>
@@ -154,7 +233,7 @@
 					<td>1</td>
 					<td>0</td>
 					<td>0</td>
-					<td></td>
+					<td>1</td>
 				</tr>
 				<tr>
 					<td>0</td>
@@ -193,6 +272,105 @@
 				</tr>
 			</table>	
 		</div>
+		
 	</div>
+	
+	<div class="section" id="threebitadder">
+		<h3>Three Bit  Adder</h3>
+		<div class="description">
+			<p> blah blah blah description</p>
+		</div>
+		<div class="circuit">
+			<div class="simcir">
+				{
+				  "width":400,
+				  "height":320,
+				  "showToolbox":false,
+				  "toolbox":[
+					{"type":"In"},
+					{"type":"Out"},
+					{"type":"DC"},
+					{"type":"LED"},
+					{"type":"PushOff"},
+					{"type":"PushOn"},
+					{"type":"Toggle"},
+					{"type":"BUF"},
+					{"type":"NOT"},
+					{"type":"AND"},
+					{"type":"NAND"},
+					{"type":"OR"},
+					{"type":"NOR"},
+					{"type":"EOR"},
+					{"type":"ENOR"},
+					{"type":"OSC"},
+					{"type":"7seg"},
+					{"type":"16seg"},
+					{"type":"4bit7seg"},
+					{"type":"RotaryEncoder"},
+					{"type":"BusIn"},
+					{"type":"BusOut"},
+					{"type":"RS-FF"},
+					{"type":"JK-FF"},
+					{"type":"T-FF"},
+					{"type":"D-FF"},
+					{"type":"8bitCounter"},
+					{"type":"HalfAdder"},
+					{"type":"FullAdder"},
+					{"type":"4bitAdder"},
+					{"type":"2to4BinaryDecoder"},
+					{"type":"3to8BinaryDecoder"},
+					{"type":"4to16BinaryDecoder"}
+				  ],
+				  "devices":[
+					{"type":"Toggle","id":"dev0","x":72,"y":8,"label":"A0"},
+					{"type":"Toggle","id":"dev1","x":72,"y":112,"label":"A1"},
+					{"type":"DC","id":"dev2","x":8,"y":136,"label":"DC"},
+					{"type":"Toggle","id":"dev3","x":72,"y":56,"label":"B0"},
+					{"type":"Toggle","id":"dev4","x":72,"y":160,"label":"B1"},
+					{"type":"Toggle","id":"dev5","x":72,"y":264,"label":"B2"},
+					{"type":"FullAdder","id":"dev6","x":168,"y":24,"label":"FullAdder"},
+					{"type":"FullAdder","id":"dev7","x":168,"y":104,"label":"FullAdder"},
+					{"type":"FullAdder","id":"dev8","x":168,"y":208,"label":"FullAdder"},
+					{"type":"Toggle","id":"dev9","x":72,"y":216,"label":"A2"},
+					{"type":"LED","id":"dev10","x":264,"y":8,"label":"S0"},
+					{"type":"LED","id":"dev11","x":264,"y":56,"label":"S1"},
+					{"type":"LED","id":"dev12","x":264,"y":104,"label":"S2"},
+					{"type":"LED","id":"dev13","x":264,"y":152,"label":"Carry"},
+					{"type":"4bit7seg","id":"dev14","x":256,"y":208,"label":"4bit7seg"}
+				  ],
+				  "connectors":[
+					{"from":"dev0.in0","to":"dev2.out0"},
+					{"from":"dev1.in0","to":"dev2.out0"},
+					{"from":"dev3.in0","to":"dev2.out0"},
+					{"from":"dev4.in0","to":"dev2.out0"},
+					{"from":"dev5.in0","to":"dev2.out0"},
+					{"from":"dev6.in1","to":"dev0.out0"},
+					{"from":"dev6.in2","to":"dev3.out0"},
+					{"from":"dev7.in0","to":"dev6.out1"},
+					{"from":"dev7.in1","to":"dev1.out0"},
+					{"from":"dev7.in2","to":"dev4.out0"},
+					{"from":"dev8.in0","to":"dev7.out1"},
+					{"from":"dev8.in1","to":"dev9.out0"},
+					{"from":"dev8.in2","to":"dev5.out0"},
+					{"from":"dev9.in0","to":"dev2.out0"},
+					{"from":"dev10.in0","to":"dev6.out0"},
+					{"from":"dev11.in0","to":"dev7.out0"},
+					{"from":"dev12.in0","to":"dev8.out0"},
+					{"from":"dev13.in0","to":"dev8.out1"},
+					{"from":"dev14.in0","to":"dev6.out0"},
+					{"from":"dev14.in1","to":"dev7.out0"},
+					{"from":"dev14.in2","to":"dev8.out0"},
+					{"from":"dev14.in3","to":"dev8.out1"}
+				  ]
+				}
+			</div>
+		</div>
+		
+	</div>
+	<hr id="adders">
+	<footer>
+		<a href="index.html">Homework 3</a>
+	</footer>
+	
 	</body>
 </html>
