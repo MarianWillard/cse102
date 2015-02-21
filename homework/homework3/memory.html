@@ -16,7 +16,7 @@
 		<div class="section">
 			<h3>One Bit Memory with NOR</h3>
 			<div class="description">
-				<p> blah blah blah description</p>
+				<p>This circuit uses NOR gates to store the value of one bit. The value is represented by the LED being on as a 1 and off as a 0.<br>NOR gates are equivalent to NOT OR. NOR outputs the value of an OR gate followed by a NOT gate. Thus, NOR gates output 1 only if both inputs are 0.<br>PushOn devices are 1 only when they are being held on, so clicking down. They are 0 otherwise.<br>Notice how the LED turns on when the top PushOn is clicked and stays on when the PushOn is released. The bottom PushOn turns off the LED.</p>
 			</div>
 			<div class="circuit">
 				<div class="simcir">
@@ -61,8 +61,8 @@
 				  ],
 				  "devices":[
 					{"type":"DC","id":"dev0","x":24,"y":40,"label":"DC"},
-					{"type":"PushOn","id":"dev1","x":96,"y":16,"label":"PushOn"},
-					{"type":"PushOn","id":"dev2","x":96,"y":72,"label":"PushOn"},
+					{"type":"PushOn","id":"dev1","x":96,"y":16,"label":"PushOnA"},
+					{"type":"PushOn","id":"dev2","x":96,"y":72,"label":"PushOnB"},
 					{"type":"NOR","id":"dev3","x":176,"y":16,"label":"NOR"},
 					{"type":"NOR","id":"dev4","x":176,"y":80,"label":"NOR"},
 					{"type":"LED","id":"dev5","x":248,"y":80,"label":"LED"}
@@ -84,7 +84,7 @@
 		<div class="section" id="NANDmem">
 			<h3>One Bit Memory with NOR</h3>
 			<div class="description">
-				<p> blah blah blah description</p>
+				<p>This circuit stores the value of one bit using only NAND gates.<br>NAND gates are equivalent to NOT AND, AND followed by a NOT. Thus, NAND output 1 if either or both of the inputs is 0. Following the circuit, one can see how the value is stored.</p>
 			</div>
 			<div class="circuit">
 				<div class="simcir">
@@ -131,11 +131,11 @@
 						{"type":"DC","id":"dev0","x":24,"y":40,"label":"DC"},
 						{"type":"NAND","id":"dev1","x":160,"y":80,"label":"NAND"},
 						{"type":"NAND","id":"dev2","x":224,"y":80,"label":"NAND"},
-						{"type":"PushOn","id":"dev3","x":88,"y":8,"label":"PushOn"},
+						{"type":"PushOn","id":"dev3","x":88,"y":8,"label":"PushOnA"},
 						{"type":"NAND","id":"dev4","x":160,"y":16,"label":"NAND"},
 						{"type":"NAND","id":"dev5","x":224,"y":16,"label":"NAND"},
 						{"type":"LED","id":"dev6","x":280,"y":80,"label":"LED"},
-						{"type":"PushOn","id":"dev7","x":88,"y":80,"label":"PushOn"}
+						{"type":"PushOn","id":"dev7","x":88,"y":80,"label":"PushOnB"}
 					  ],
 					  "connectors":[
 						{"from":"dev1.in0","to":"dev0.out0"},
@@ -154,7 +154,7 @@
 				</div>
 			</div>
 		</div>
-		<hr id="memory">
+		<hr id="hr-memory">
 		<footer>
 			<a href="index.html">Homework 3</a>
 		</footer>

@@ -17,7 +17,7 @@
 	<div class="section">
 		<h3>Half-Adder</h3>
 		<div class="description">
-			<p> blah blah blah description</p>
+			<p>The half-adder takes in two bits and adds them producing a single sum bit and a carry bit.  The sum bit is the right most binary value of the sum of the two input bits, and the carry bit is the left binary value of the sum of the two input bits.<br>A half-adder is generally created using a XOR gate and a AND gate. However, the half-adder can be made by using only AND, NOT, and OR gates.  In the circuit diagram, A and B are toggles.  By default toggles are off or 0s. Clicking the toggles will flip them to be on, or 1s.<br>ANDs return 1 only if both inputs are 1. NOTs flip the value of the input, so 0 becomes 1 and 1 becomes 0.  ORs return 1 if one or both of the inputs is 1. <br>Following the logic for each of the gates in-order, the values in the table can be found.</p>
 		</div>
 		<div class="circuit">
 			<div class="simcir">
@@ -61,11 +61,11 @@
 					{"type":"4to16BinaryDecoder"}
 				  ],
 				  "devices":[
-					{"type":"Toggle","id":"dev0","x":72,"y":32,"label":"Toggle"},
+					{"type":"Toggle","id":"dev0","x":72,"y":32,"label":"A"},
 					{"type":"OR","id":"dev1","x":176,"y":56,"label":"OR"},
 					{"type":"AND","id":"dev2","x":176,"y":8,"label":"AND"},
 					{"type":"NOT","id":"dev3","x":232,"y":8,"label":"NOT"},
-					{"type":"Toggle","id":"dev4","x":72,"y":96,"label":"Toggle"},
+					{"type":"Toggle","id":"dev4","x":72,"y":96,"label":"B"},
 					{"type":"DC","id":"dev5","x":8,"y":64,"label":"DC"},
 					{"type":"AND","id":"dev6","x":280,"y":40,"label":"AND"},
 					{"type":"AND","id":"dev7","x":176,"y":112,"label":"AND"},
@@ -128,7 +128,7 @@
 	<div class="section">
 		<h3>Full Adder</h3>
 		<div class="description">
-			<p> blah blah blah description</p>
+			<p>Full-adders are usually made of two half-adders. A and B are the inputs to the first half-adder, then the resulting sum bit and the Cin bit are the inputs to the second half-adder. The sum bit from the second half-adder is the final sum bit. ORing the carry bit from the second half-adder produces the final Carry bit.<br>Each EOR (exclusive or) and AND pair are a half-adder.<br>EOR returns 1 only if one and only one input is 1.</p>
 		</div>
 		<div class="circuit">
 			<div class="simcir">
@@ -277,7 +277,7 @@
 	<div class="section">
 		<h3>Three Bit  Adder</h3>
 		<div class="description">
-			<p> blah blah blah description</p>
+			<p>This circuit adds two three-bit binary numbers. A0 is the right most bit of number A, A1 is the middle bit of A, and A2 is the left bit.  Same form for B.<br>Each full-adder is two half-adders. This circuit uses 3 full-adders. Just for giggles, that is six half-adders.<br> HexOutput shows the result of this circuit as a hexadecimal number.  Hexadecimal numbers range from 0 to F before flipping to 10.  10 in hex is 16 in decimal.  F in hex is 15 in decimal.</p>
 		</div>
 		<div class="circuit">
 			<div class="simcir">
@@ -335,7 +335,7 @@
 					{"type":"LED","id":"dev11","x":264,"y":56,"label":"S1"},
 					{"type":"LED","id":"dev12","x":264,"y":104,"label":"S2"},
 					{"type":"LED","id":"dev13","x":264,"y":152,"label":"Carry"},
-					{"type":"4bit7seg","id":"dev14","x":256,"y":208,"label":"4bit7seg"}
+					{"type":"4bit7seg","id":"dev14","x":256,"y":208,"label":"HexOutput"}
 				  ],
 				  "connectors":[
 					{"from":"dev0.in0","to":"dev2.out0"},
@@ -366,7 +366,7 @@
 		</div>
 		
 	</div>
-	<hr id="adders">
+	<hr id="hr-adders">
 	<footer>
 		<a href="index.html">Homework 3</a>
 	</footer>

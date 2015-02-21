@@ -12,6 +12,7 @@ body{
 }
 td {
 	padding: 0px 3px 0px 3px;
+	text-align: center;
 }
 
 tr:nth-child(odd) td{
@@ -61,12 +62,15 @@ footer{
 	text-align: center;
 	background-color: #A6DCA6;
 }
-#adders{
+#hr-adders{
 	margin-top: 350px;
 }
-#memory {
+#hr-memory {
 	margin-top: 250px;
 }
 a {
 	Text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
 }
