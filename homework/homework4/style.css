@@ -1,0 +1,44 @@
+body {
+
+	background-color:	#EDF4F7;
+	font-family: Tahoma, sans-serif;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+#content {
+	background-color: #91BCD1;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #244859;
+	border-radius: 10px;
+	margin -top: 0px;
+}
+
+#video {
+	text-align: center;
+}
+
+a{
+	Text-decoration: none;
+	
+}
+a:hover{
+	text-decoration: underline;
+}
+
+hr {
+	border-style: outset;
+	border-width: 1px;
+	border-color: #244859;
+}
+footer{
+	padding: 10px;
+	text-align: center;
+}
+
+img {
+	text-align: center;
+}
